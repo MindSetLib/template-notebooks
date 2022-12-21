@@ -196,10 +196,10 @@ pyenv local 3.9.15
 
 ### Install
 
-Скачать и установить `poetry`.
+Скачать и установить [poetry](https://python-poetry.org/docs/#installing-with-the-official-installer).
 
 ```commandline
-curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+curl -sSL https://install.python-poetry.org | python -
 ```
 
 Добавить путь к `poetry`.
@@ -224,6 +224,32 @@ poetry shell
 ```commandline
 poetry install
 ```
+
+**Возможные ошибки и исправления**
+
+Ошибка
+
+```
+Current Python version (3.8.10) is not allowed by the project (^3.9.10).
+Please change python executable via the "env use" command.
+```
+
+Исправление
+
+Удалить и заново поставить окружение. Вне окружения необходимо выполнить команды.
+
+Посмотреть название окружения.
+
+```commandline
+poetry env info
+```
+
+Удалить окружение.
+
+```commandline
+poetry env remove <name_env>
+```
+`<name_env>`: название окружения, пример названия `layer-7iBn6U-py3.9`.
 
 # Create kernel
 
