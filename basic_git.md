@@ -83,6 +83,12 @@ git pull
 git log
 ```
 
+Вернуть файлы к состоянию последнего коммита.
+
+```commandline
+git checkout .
+```
+
 Удалить определенный файл из репозитория.
 
 ```commandline
@@ -101,4 +107,72 @@ git restore --staged <file_name>
 ```commandline
 # вернуть в исходное состояние
 git restore <file_name>
+```
+
+### Создать новую ветку
+
+Посмотрим какие ветки существуют.
+
+```commandline
+git branch -a
+```
+
+Создадим новую ветку.
+
+```commandline
+git branch <name_new_branch>
+```
+
+Переключимся на новую ветку.
+
+```commandline
+git checkout <name_new_branch>
+```
+
+Отправим ветку на сервер. После этого можно отправлять коммиты как обычно, просто вводя команду `git push`.
+
+```commandline
+git push -u origin <name_new_branch>
+```
+
+### Merge
+
+1. Заходим в репозиторий на сайте.
+
+2. Переходим в список веток `n branch`.
+
+3. Переходим в раздел `Active`.
+
+4. Напратив названия ветки нажимаем на кнопку `New pull request` и делаем merge.
+
+5. После merge удаляем ветку (смотрим в том же меню, где делали merge).
+
+6. Переходим в локальный репозиторий и обновляем изменения 
+
+```commandline
+git pull
+```
+
+Почистим ветки в локальном репозитории.
+
+7. Переключимся на основную ветку.
+
+```commandline
+git checkout main
+```
+
+8. Удалить удаленное отслеживание, если ветки нет на удаленном репо.
+
+```commandline
+git remote prune origin
+```
+
+9. Удаляем локльные ветки, они двух видов `<name_branch>` и `remotes/origin/<name_branch>`.
+
+```commandline
+git branch -D <name_branch>
+```
+
+```commandline
+git branch -D `remotes/origin/<name_branch>`
 ```
