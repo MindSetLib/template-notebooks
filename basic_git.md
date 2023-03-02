@@ -167,7 +167,7 @@ git checkout main
 git remote prune origin
 ```
 
-9. Удаляем локльные ветки, они двух видов `<name_branch>` и `remotes/origin/<name_branch>`.
+9. Удаляем локальные ветки, они двух видов `<name_branch>` и `remotes/origin/<name_branch>`.
 
 ```commandline
 git branch -D <name_branch>
@@ -175,4 +175,10 @@ git branch -D <name_branch>
 
 ```commandline
 git branch -D `remotes/origin/<name_branch>`
+```
+
+10. Обновляем локальную версию.
+
+```commandline
+git pull
 ```
