@@ -174,7 +174,7 @@ git branch -D <name_branch>
 ```
 
 ```commandline
-git branch -D `remotes/origin/<name_branch>`
+git branch -D remotes/origin/<name_branch>
 ```
 
 10. Обновляем локальную версию.
