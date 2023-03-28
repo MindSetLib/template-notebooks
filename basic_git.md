@@ -125,6 +125,12 @@ git restore <file_name>
 git branch -a
 ```
 
+Переключится на ветку, от которой хотим отпочковаться.
+
+```commandline
+git checkout <name_branch>
+```
+
 Создадим новую ветку.
 
 ```commandline
