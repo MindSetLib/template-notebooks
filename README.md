@@ -190,6 +190,17 @@ cd <repo_name>
 pyenv local 3.9.15
 ```
 
+# Gitignore
+
+Добавим в `.gitignore` директории которые будут игнорироваться на уровне всех проектов.
+
+```commandline
+# Project
+**/data
+**/weights
+**/logs
+```
+
 # Poetry
 
 В проекте используется менеджер пакетов `poetry`.
