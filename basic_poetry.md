@@ -36,3 +36,43 @@ poetry shell
 ```commandline
 poetry add <library>==<version>
 ```
+
+### Удалить окружение
+
+Посмотреть какие окружения установлены.
+
+```
+ls /home/jovyan/.cache/pypoetry/virtualenvs/
+```
+
+Посмотреть сколько окружение занимает места.
+
+```
+du -sh /home/jovyan/.cache/pypoetry/virtualenvs/<dir_name>
+```
+
+Вначале необходимо удалить ядро для ноутбука, чтобы оно больше не отображалось в интерфейсе Jupyter Lab. Смотрим список из имеющихся ядер.
+
+```
+jupyter kernelspec list
+```
+
+Удалить ненужное ядро.
+
+```
+jupyter kernelspec uninstall <name kernel>
+```
+
+Посмотреть имеющиеся окружения.
+
+```
+ls /home/jovyan/.cache/pypoetry/virtualenvs/
+```
+
+Удалить ненужное окружение.
+
+```
+sudo rm -rf /home/jovyan/.cache/pypoetry/virtualenvs/<dir_name>
+```
+
+

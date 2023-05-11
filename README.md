@@ -216,7 +216,7 @@ curl -sSL https://install.python-poetry.org | python -
 Добавить путь к `poetry`.
 
 ```commandline
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/home/jovyan/.local/bin:$PATH"
 ```
 
 ### Установить окружение
